@@ -1,0 +1,1244 @@
+Subject: [PATCH] Committing the testcases of App launch feature P11270-21631, P11270-21632, P11270-21633  P11270-21634 , P11270-21636,P11270-21661, P11270-21662
+---
+Index: src/test/java/contants/AppInstallAndLaunchConstants.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/contants/AppInstallAndLaunchConstants.java b/src/test/java/contants/AppInstallAndLaunchConstants.java
+--- a/src/test/java/contants/AppInstallAndLaunchConstants.java	(revision e353df14ba5aaa31423a6dd2ac5b427141a7db81)
++++ b/src/test/java/contants/AppInstallAndLaunchConstants.java	(revision 6bc3a2f47f54e366cd80fd48417dff1e88fe1cb2)
+@@ -49,4 +49,8 @@
+     public static String NECTARBALANCETXT1 = "You have";
+     public static String NECTARBALANCETXT2 = "Nectar points";
+     public static String REJECTALLBUTTONPRIVACYSCREEEN = "Reject All";
++    public static String ANALYTICSANDPERFORMANCETITLE="Analytics & Performance";
++    public static String ANALYTICSANDPERFORMANCESECTIONCT="These technologies tell us how customers use our app and provide information to help us improve performance. The information gathered is aggregated and therefore anonymous. You can turn these off, but we will be unable to monitor how the app performs.";
++    public static String FUNCTIONSECTIONCT="These technologies allow us to provide certain functionalities and services within the app, for example refer a friend or usage incentive offers. You can turn them off, however certain features of the app may not be available to you.";
++    public static String FUNCTIONALTITLE="Functional";
+ }
+Index: src/test/java/contants/AppLaunchConstants.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/contants/AppLaunchConstants.java b/src/test/java/contants/AppLaunchConstants.java
+--- a/src/test/java/contants/AppLaunchConstants.java	(revision e353df14ba5aaa31423a6dd2ac5b427141a7db81)
++++ b/src/test/java/contants/AppLaunchConstants.java	(revision 6bc3a2f47f54e366cd80fd48417dff1e88fe1cb2)
+@@ -1,25 +1,25 @@
+ package contants;
+ 
+ public class AppLaunchConstants {
+-    public static final String userName="essoapp22+offer3@gmail.com";
+-    public static final String password="Test@123";
+-    public static final String Tutorial_welComeMessage="Welcome to \n" +
++    public static final String userName = "essoapp22+offer3@gmail.com";
++    public static final String password = "Test@123";
++    public static final String Tutorial_welComeMessage = "Welcome to \n" +
+             "Esso!";
+     public static final String Tutorial_welComeMessageiOS = "Welcome to Esso!";
+-    public static String Tutorial_PaySecurelyTitle="Pay securely from your car";
+-    public static String Tutorial_NectarPoint_Title="Collect Nectar points on every fill";
++    public static String Tutorial_PaySecurelyTitle = "Pay securely from your car";
++    public static String Tutorial_NectarPoint_Title = "Collect Nectar points on every fill";
+ 
+-    public static final String SubTitle="Use the Esso App to pay from your car and earn fuel rewards.";
+-    public static final String SubTitleAndroid="Use the Esso App to pay from\n"+
++    public static final String SubTitle = "Use the Esso App to pay from your car and earn fuel rewards.";
++    public static final String SubTitleAndroid = "Use the Esso App to pay from\n" +
+             "your car and earn fuel rewards.";
+-    public static final String addNectarCardLinkText="Add Nectar card & never miss out on points again";
+-    public static final String addNectarPageTitle="Add Nectar Card";
+-    public static final String getStartedText="Get Started";
+-    public static final String nectarSuccessPopupText="Card Added Successfully.\n" +
++    public static final String addNectarCardLinkText = "Add Nectar card & never miss out on points again";
++    public static final String addNectarPageTitle = "Add Nectar Card";
++    public static final String getStartedText = "Get Started";
++    public static final String nectarSuccessPopupText = "Card Added Successfully.\n" +
+             "\n" +
+             "\"Esso\" would like to open \n" +
+             "\"nectar.com\" to verify your card.";
+-    public static final String nectarSuccessPopupTextiOS="Card added successfully. \n" +
++    public static final String nectarSuccessPopupTextiOS = "Card added successfully. \n" +
+             "\n" +
+             " \"Esso\" would like to open   \"nectar.com\" to verify your card.";
+ //    public static String NectarCardNumber_Text="";
+Index: src/test/java/features/AppInstallAndLaunch.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/features/AppInstallAndLaunch.feature b/src/test/java/features/AppInstallAndLaunch.feature
+--- a/src/test/java/features/AppInstallAndLaunch.feature	(revision e353df14ba5aaa31423a6dd2ac5b427141a7db81)
++++ b/src/test/java/features/AppInstallAndLaunch.feature	(revision 6bc3a2f47f54e366cd80fd48417dff1e88fe1cb2)
+@@ -183,6 +183,83 @@
+     Then verify that Welcome screen screen is displayed
+     And Verify Pay securely from your car screen displayed
+     And Verify Collect Nectar points on every fill
++  #############################Mahesh###############
++  @P11270-21631
++  Scenario:Verify the user should able to display the Analytics & Performance section with a checkbox.
++    Given reset the app
++    Then user should redirect to Data Privacy landing page screen
++    When user taps on manage options
++    Then user should redirect to Manage your cookie settings screen
++    Then user should view title as Analytics & Performance for the analytics section
++    Then user should see Analytics & Performance checkbox for the analytics section
++    Then user should see the copy text as the content in the Analytics & Performance section
++
++  @P11270-21632
++  Scenario:Verify the user should able to unselect/select the analytics check box.
++    Given reset the app
++    Then user should redirect to Data Privacy landing page screen
++    When user taps on manage options
++    Then user should redirect to Manage your cookie settings screen
++    Then user should view title as Analytics & Performance for the analytics section
++    Then user should see Analytics & Performance checkbox for the analytics section
++    Then user should be able to select Analytics & Performance checkbox
++    Then user should be able to unselect Analytics & Performance checkbox
++
++  @P11270-21633
++  Scenario:Verify the user should able to display the Functional section with a checkbox.
++    Given reset the app
++    Then user should redirect to Data Privacy landing page screen
++    When user taps on manage options
++    Then user should redirect to Manage your cookie settings screen
++    Then user should view title as Functional for the Functional section
++    Then user should see Functional checkbox for the Functional section
++    Then user should see the copy text as the content in the Functional section
++
++  @P11270-21634
++  Scenario:Verify the user should able to unselect/select the Functional check box.
++    Given reset the app
++    Then user should redirect to Data Privacy landing page screen
++    When user taps on manage options
++    Then user should redirect to Manage your cookie settings screen
++    Then user should view title as Functional for the Functional section
++    Then user should see Functional checkbox for the Functional section
++    Then user should be able to select Functional checkbox
++    Then user should be able to unselect Functional checkbox
++
++  @P11270-21636
++  Scenario:Verify the user should able to accept the user privacy settings for Analytics & Performance/Functional from the ‘MANAGE OPTIONS' screen.
++    Given reset the app
++    Then user should redirect to Data Privacy landing page screen
++    When user taps on manage options
++    Then user should redirect to Manage your cookie settings screen
++    When user should be able to select Analytics & Performance checkbox
++    When user should be able to select Functional checkbox
++    When user taps on confirm on manage your cookie settings screen
++    Then user should redirected to tutorial screen
++
++  @P11270-21661
++  Scenario:Verify the user should able to navigate back to the Data Privacy landing page screen
++    Given reset the app
++    Then user should redirect to Data Privacy landing page screen
++    When user taps on manage options
++    Then user should redirect to Manage your cookie settings screen
++    When user taps back on manage your cookie settings screen
++
++  @P11270-21662
++  Scenario:Verify the user should retain the previous selection made by the user on the ‘MANAGE OPTIONS' screen.
++    Given reset the app
++    Then user should redirect to Data Privacy landing page screen
++    When user taps on manage options
++    Then user should redirect to Manage your cookie settings screen
++    When user should be able to select Analytics & Performance checkbox
++    When user should be able to select Functional checkbox
++    When user taps back on manage your cookie settings screen
++    When user taps on manage options
++    Then App should show the selected options retained
++
++
++
++
+ 
+ #  @P11270-13135- @IosRegression-
+ #  Scenario: Offers -UI & alignment for all the New offer screen
+Index: src/test/java/pages/AppInstallAndLaunchPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pages/AppInstallAndLaunchPage.java b/src/test/java/pages/AppInstallAndLaunchPage.java
+--- a/src/test/java/pages/AppInstallAndLaunchPage.java	(revision e353df14ba5aaa31423a6dd2ac5b427141a7db81)
++++ b/src/test/java/pages/AppInstallAndLaunchPage.java	(revision 6bc3a2f47f54e366cd80fd48417dff1e88fe1cb2)
+@@ -307,6 +307,34 @@
+ 	@iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Skip\"]")
+ 	public WebElement TutorialSkipButton;
+ 
++	@AndroidFindBy(id = "text_analytics_title")
++	@iOSXCUITFindBy(xpath = "needed")
++	public WebElement AnalyticsAndPerformance;
++
++	@AndroidFindBy(id = "checkbox_analytics")
++	@iOSXCUITFindBy(xpath = "needed")
++	public WebElement AnalyticsAndPerformanceCheckbox;
++
++	@AndroidFindBy(id = "text_analytics_details")
++	@iOSXCUITFindBy(xpath = "needed")
++	public WebElement AnalyticsAndPerformanceSectionCT;
++
++	@AndroidFindBy(id = "text_functional")
++	@iOSXCUITFindBy(xpath = "needed")
++	public WebElement Functional;
++	@AndroidFindBy(id = "checkBox_functional")
++	@iOSXCUITFindBy(xpath = "needed")
++	public WebElement FunctionalCheckbox;
++
++	@AndroidFindBy(id = "text_functional_details")
++	@iOSXCUITFindBy(xpath = "needed")
++	public WebElement FunctionalSectionCT;
++
++	@AndroidFindBy(id = "button_confirm")
++	@iOSXCUITFindBy(xpath = "needed")
++	public WebElement ConfirmOnCookieSettings;
++
++
+ 	public AppInstallAndLaunchPage() {
+ 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+ 	}
+Index: src/test/java/stepDefinitions/AppInstallAndLaunchSteps.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/stepDefinitions/AppInstallAndLaunchSteps.java b/src/test/java/stepDefinitions/AppInstallAndLaunchSteps.java
+--- a/src/test/java/stepDefinitions/AppInstallAndLaunchSteps.java	(revision e353df14ba5aaa31423a6dd2ac5b427141a7db81)
++++ b/src/test/java/stepDefinitions/AppInstallAndLaunchSteps.java	(revision 6bc3a2f47f54e366cd80fd48417dff1e88fe1cb2)
+@@ -12,298 +12,298 @@
+ 
+ public class AppInstallAndLaunchSteps extends AppInstallAndLaunchPage {
+ 
+-	@Given("^user validates tutorial screen$")
+-	public void user_validates_tutorial_screen() throws Throwable {
+-		waitFor(6000);
+-		if (isElementDisplayedWithoutAssert(CameraAccessOkPopup)) {
+-			clickButtonWithOutScroll(CameraAccessOkPopup);
+-		}
+-		if (isElementDisplayedWithoutAssert(FaceIdAccessOkPopup)) {
+-			clickButtonWithOutScroll(FaceIdAccessOkPopup);
+-		}
+-		if(isElementDisplayedWithoutAssert(acceptAllButtonAppLaunch)) {
+-			waitForElement(acceptAllButtonAppLaunch, 20);
+-			clickButtonWithOutScroll(acceptAllButtonAppLaunch);
+-		}
+-		waitForElement(WelcomTtl,10);
+-		if (platformName.equalsIgnoreCase("android")) {
+-			isElementDisplayed(WelcomImg);
+-			staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_One_Page_Title);
+-			staticTextValidation(Subtitle, AppInstallAndLaunchConstants.Tutorial_Screen_One_Sub_Title_Android);
+-		} else if (platformName.equalsIgnoreCase("iOS")) {
++    @Given("^user validates tutorial screen$")
++    public void user_validates_tutorial_screen() throws Throwable {
++        waitFor(6000);
++        if (isElementDisplayedWithoutAssert(CameraAccessOkPopup)) {
++            clickButtonWithOutScroll(CameraAccessOkPopup);
++        }
++        if (isElementDisplayedWithoutAssert(FaceIdAccessOkPopup)) {
++            clickButtonWithOutScroll(FaceIdAccessOkPopup);
++        }
++        if (isElementDisplayedWithoutAssert(acceptAllButtonAppLaunch)) {
++            waitForElement(acceptAllButtonAppLaunch, 20);
++            clickButtonWithOutScroll(acceptAllButtonAppLaunch);
++        }
++        waitForElement(WelcomTtl, 10);
++        if (platformName.equalsIgnoreCase("android")) {
++            isElementDisplayed(WelcomImg);
++            staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_One_Page_Title);
++            staticTextValidation(Subtitle, AppInstallAndLaunchConstants.Tutorial_Screen_One_Sub_Title_Android);
++        } else if (platformName.equalsIgnoreCase("iOS")) {
+ //			isElementDisplayed(WelcomImg);
+-			Assert.assertTrue(WelcomTtl.isDisplayed());
+-			Assert.assertTrue(Subtitle.isDisplayed());
+-		}
+-	}
++            Assert.assertTrue(WelcomTtl.isDisplayed());
++            Assert.assertTrue(Subtitle.isDisplayed());
++        }
++    }
+ 
+-	@When("^Validate swipe app tutorial screen$")
+-	public void validate_swipe_app_tutorial_screen() throws Throwable {
+-		swipeHorizontal(2000, WelcomTtl);
+-		swipeHorizontal(2000, WelcomTtl_two);
+-		swipeHorizontal(2000, WelcomTtl_three);
+-	}
++    @When("^Validate swipe app tutorial screen$")
++    public void validate_swipe_app_tutorial_screen() throws Throwable {
++        swipeHorizontal(2000, WelcomTtl);
++        swipeHorizontal(2000, WelcomTtl_two);
++        swipeHorizontal(2000, WelcomTtl_three);
++    }
+ 
+-	@Then("^Validate on next button$")
+-	public void validate_on_next_button() throws Throwable {
+-		Assert.assertTrue(isTextContain(NextBtn.getText(), AppInstallAndLaunchConstants.NEXT));
+-	}
++    @Then("^Validate on next button$")
++    public void validate_on_next_button() throws Throwable {
++        Assert.assertTrue(isTextContain(NextBtn.getText(), AppInstallAndLaunchConstants.NEXT));
++    }
+ 
+-	@When("^Validate tap on next button second screen$")
+-	public void validate_tap_on_next_button_second_screen() throws Throwable {
+-		Assert.assertTrue(isTextContain(NextBtn.getText(), AppInstallAndLaunchConstants.NEXT));
+-		clickButtonWithOutScroll(NextBtn);
+-	}
++    @When("^Validate tap on next button second screen$")
++    public void validate_tap_on_next_button_second_screen() throws Throwable {
++        Assert.assertTrue(isTextContain(NextBtn.getText(), AppInstallAndLaunchConstants.NEXT));
++        clickButtonWithOutScroll(NextBtn);
++    }
+ 
+-	@When("^Validate tap on next button third screen$")
+-	public void validate_tap_on_next_button_third_screen() throws Throwable {
+-		Assert.assertTrue(isTextContain(NextBtn.getText(), AppInstallAndLaunchConstants.NEXT));
+-		clickButtonWithOutScroll(NextBtn);
+-	}
++    @When("^Validate tap on next button third screen$")
++    public void validate_tap_on_next_button_third_screen() throws Throwable {
++        Assert.assertTrue(isTextContain(NextBtn.getText(), AppInstallAndLaunchConstants.NEXT));
++        clickButtonWithOutScroll(NextBtn);
++    }
+ 
+-	@Then("^Validate tap on next button first screen$")
+-	public void validate_tap_on_next_button_first_screen() throws Throwable {
+-		Assert.assertTrue(isTextContain(NextBtn.getText(), AppInstallAndLaunchConstants.NEXT));
+-		clickButtonWithOutScroll(NextBtn);
+-	}
++    @Then("^Validate tap on next button first screen$")
++    public void validate_tap_on_next_button_first_screen() throws Throwable {
++        Assert.assertTrue(isTextContain(NextBtn.getText(), AppInstallAndLaunchConstants.NEXT));
++        clickButtonWithOutScroll(NextBtn);
++    }
+ 
+-	@When("^Validate the second Skip screen$")
+-	public void validate_the_second_skip_screen() throws Throwable {
+-		Assert.assertTrue(isTextContain(skip_BTN.getText(), AppInstallAndLaunchConstants.SKIP));
+-	}
++    @When("^Validate the second Skip screen$")
++    public void validate_the_second_skip_screen() throws Throwable {
++        Assert.assertTrue(isTextContain(skip_BTN.getText(), AppInstallAndLaunchConstants.SKIP));
++    }
+ 
+-	@Then("^Validate the First Skip screen$")
+-	public void validate_the_first_skip_screen() throws Throwable {
+-		Assert.assertTrue(isTextContain(skip_BTN.getText(), AppInstallAndLaunchConstants.SKIP));
+-	}
++    @Then("^Validate the First Skip screen$")
++    public void validate_the_first_skip_screen() throws Throwable {
++        Assert.assertTrue(isTextContain(skip_BTN.getText(), AppInstallAndLaunchConstants.SKIP));
++    }
+ 
+-	@And("^Validate the third Skip screen$")
+-	public void validate_the_third_skip_screen() throws Throwable {
+-		Assert.assertTrue(isTextContain(skip_BTN.getText(), AppInstallAndLaunchConstants.SKIP));
+-	}
++    @And("^Validate the third Skip screen$")
++    public void validate_the_third_skip_screen() throws Throwable {
++        Assert.assertTrue(isTextContain(skip_BTN.getText(), AppInstallAndLaunchConstants.SKIP));
++    }
+ 
+-	@When("^Validate skip click on skip button$")
+-	public void validate_skip_click_on_skip_button() throws Throwable {
+-		if (isElementDisplayedWithoutAssert(skip_BTN)) {
+-			clickButtonWithOutScroll(skip_BTN);
+-		}
+-	}
++    @When("^Validate skip click on skip button$")
++    public void validate_skip_click_on_skip_button() throws Throwable {
++        if (isElementDisplayedWithoutAssert(skip_BTN)) {
++            clickButtonWithOutScroll(skip_BTN);
++        }
++    }
+ 
+-	@Then("^Validate second screen$")
+-	public void validate_second_screen() throws Throwable {
+-		if (platformName.equalsIgnoreCase("android")) {
+-			waitForElement(WelcomTtl,20);
+-		isElementDisplayed(NextBtn);
+-		isElementDisplayed(skip_BTN);
+-			isElementDisplayed(WelcomImg2);
+-			staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_Second_Page_Title);
+-			staticTextValidation(SubtitleSecondScreen, AppInstallAndLaunchConstants.Tutorial_Screen_Second_Sub_Title);
+-		} else {
+-			waitForElement(WelcomTtl,20);
+-			isElementDisplayed(NextBtn);
+-			isElementDisplayed(skip_BTN);
+-			staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_Second_Page_Title);
+-			Assert.assertTrue(SubtitleSecondScreen.isDisplayed());
+-			}
+-	}
++    @Then("^Validate second screen$")
++    public void validate_second_screen() throws Throwable {
++        if (platformName.equalsIgnoreCase("android")) {
++            waitForElement(WelcomTtl, 20);
++            isElementDisplayed(NextBtn);
++            isElementDisplayed(skip_BTN);
++            isElementDisplayed(WelcomImg2);
++            staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_Second_Page_Title);
++            staticTextValidation(SubtitleSecondScreen, AppInstallAndLaunchConstants.Tutorial_Screen_Second_Sub_Title);
++        } else {
++            waitForElement(WelcomTtl, 20);
++            isElementDisplayed(NextBtn);
++            isElementDisplayed(skip_BTN);
++            staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_Second_Page_Title);
++            Assert.assertTrue(SubtitleSecondScreen.isDisplayed());
++        }
++    }
+ 
+-	@Then("^third screen$")
+-	public void third_screen() throws Throwable {
+-		if (platformName.equalsIgnoreCase("android")) {
+-			swipeHorizontal(2000, WelcomTtl);
+-			Assert.assertTrue(isElementDisplayed(WelcomTtl));
+-			Assert.assertTrue(isElementDisplayed(NextBtn));
+-			Assert.assertTrue(isElementDisplayed(skip_BTN));
+-		} else {
+-			swipeHorizontal(2000, WelcomTtl_two);
+-			Assert.assertTrue(isElementDisplayed(WelcomTtl_three));
+-			Assert.assertTrue(isElementDisplayed(NextBtn));
+-			Assert.assertTrue(isElementDisplayed(skip_BTN));
+-		}
++    @Then("^third screen$")
++    public void third_screen() throws Throwable {
++        if (platformName.equalsIgnoreCase("android")) {
++            swipeHorizontal(2000, WelcomTtl);
++            Assert.assertTrue(isElementDisplayed(WelcomTtl));
++            Assert.assertTrue(isElementDisplayed(NextBtn));
++            Assert.assertTrue(isElementDisplayed(skip_BTN));
++        } else {
++            swipeHorizontal(2000, WelcomTtl_two);
++            Assert.assertTrue(isElementDisplayed(WelcomTtl_three));
++            Assert.assertTrue(isElementDisplayed(NextBtn));
++            Assert.assertTrue(isElementDisplayed(skip_BTN));
++        }
+ 
+-	}
++    }
+ 
+-	@Then("^validate third screen$")
+-	public void validate_third_screen() throws Throwable {
++    @Then("^validate third screen$")
++    public void validate_third_screen() throws Throwable {
+ 
+-		if (platformName.equalsIgnoreCase("android")) {
+-			Assert.assertTrue(isElementDisplayed(NextBtn));
+-			Assert.assertTrue(isElementDisplayed(skip_BTN));
+-			Assert.assertTrue(isElementDisplayed(WelcomTtl));
+-			Assert.assertTrue(isElementDisplayed(WelcomImg3));
+-			Assert.assertTrue(isTextMatch(WelcomTtl.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_Third_Page_Title));
+-			Assert.assertTrue(isTextMatch(Subtitle.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_Third_Sub_Title));
+-		} else {
+-			Assert.assertTrue(isElementDisplayed(WelcomTtl_3));
+-			Assert.assertTrue(isTextMatch(WelcomTtl_four.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_Third_Page_Title_iOS));
+-			Assert.assertTrue(isTextMatch(WelcomSUBTtl_fournew.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_Third_Sub_Title_iOS));
+-			Assert.assertTrue(isElementDisplayed(GetStarted_BTN));
+-			Assert.assertTrue(isElementDisplayed(WelcomImg3));
+-		}
+-	}
++        if (platformName.equalsIgnoreCase("android")) {
++            Assert.assertTrue(isElementDisplayed(NextBtn));
++            Assert.assertTrue(isElementDisplayed(skip_BTN));
++            Assert.assertTrue(isElementDisplayed(WelcomTtl));
++            Assert.assertTrue(isElementDisplayed(WelcomImg3));
++            Assert.assertTrue(isTextMatch(WelcomTtl.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_Third_Page_Title));
++            Assert.assertTrue(isTextMatch(Subtitle.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_Third_Sub_Title));
++        } else {
++            Assert.assertTrue(isElementDisplayed(WelcomTtl_3));
++            Assert.assertTrue(isTextMatch(WelcomTtl_four.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_Third_Page_Title_iOS));
++            Assert.assertTrue(isTextMatch(WelcomSUBTtl_fournew.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_Third_Sub_Title_iOS));
++            Assert.assertTrue(isElementDisplayed(GetStarted_BTN));
++            Assert.assertTrue(isElementDisplayed(WelcomImg3));
++        }
++    }
+ 
+-	@And("^fourth screen$")
+-	public void fourth_screen() throws Throwable {
+-		if (platformName.equalsIgnoreCase("android")) {
+-			swipeHorizontal(2000, WelcomTtl);
+-			Assert.assertTrue(isElementDisplayed(WelcomTtl));
+-			Assert.assertTrue(isElementDisplayed(GetStarted_BTN));
++    @And("^fourth screen$")
++    public void fourth_screen() throws Throwable {
++        if (platformName.equalsIgnoreCase("android")) {
++            swipeHorizontal(2000, WelcomTtl);
++            Assert.assertTrue(isElementDisplayed(WelcomTtl));
++            Assert.assertTrue(isElementDisplayed(GetStarted_BTN));
+ 
+-		} else {
+-			swipeHorizontal(2000, WelcomTtl_three);
+-			Assert.assertTrue(isElementDisplayed(WelcomTtl_four));
+-			Assert.assertTrue(isElementDisplayed(GetStarted_BTN));
++        } else {
++            swipeHorizontal(2000, WelcomTtl_three);
++            Assert.assertTrue(isElementDisplayed(WelcomTtl_four));
++            Assert.assertTrue(isElementDisplayed(GetStarted_BTN));
+ 
+-		}
+-	}
++        }
++    }
+ 
+-	@And("^validate fourth screen$")
+-	public void validate_fourth_screen() throws Throwable {
+-		Assert.assertTrue(isElementDisplayed(GetStarted_BTN));
+-		if (platformName.equalsIgnoreCase("android")) {
+-			Assert.assertTrue(isElementDisplayed(WelcomTtl));
+-			Assert.assertTrue(isElementDisplayed(WelcomImg4));
+-			Assert.assertTrue(isTextMatch(WelcomTtl.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_Fourth_Page_Title));
+-			Assert.assertTrue(isTextMatch(Subtitle.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_FourthSub_Title));
+-		} else {
+-			Assert.assertTrue(isElementDisplayed(WelcomTtl_four));
+-			Assert.assertTrue(WelcomImg4.isEnabled());
+-			Assert.assertTrue(isTextMatch(WelcomTtl_four.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_Fourth_Page_Title_ios));
+-			Assert.assertTrue(isTextMatch(WelcomSUBTtl_four.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_FourthSub_Title_iOS));
+-		}
+-	}
++    @And("^validate fourth screen$")
++    public void validate_fourth_screen() throws Throwable {
++        Assert.assertTrue(isElementDisplayed(GetStarted_BTN));
++        if (platformName.equalsIgnoreCase("android")) {
++            Assert.assertTrue(isElementDisplayed(WelcomTtl));
++            Assert.assertTrue(isElementDisplayed(WelcomImg4));
++            Assert.assertTrue(isTextMatch(WelcomTtl.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_Fourth_Page_Title));
++            Assert.assertTrue(isTextMatch(Subtitle.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_FourthSub_Title));
++        } else {
++            Assert.assertTrue(isElementDisplayed(WelcomTtl_four));
++            Assert.assertTrue(WelcomImg4.isEnabled());
++            Assert.assertTrue(isTextMatch(WelcomTtl_four.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_Fourth_Page_Title_ios));
++            Assert.assertTrue(isTextMatch(WelcomSUBTtl_four.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_FourthSub_Title_iOS));
++        }
++    }
+ 
+-	@Then("^Validate tabs for the Global Tab Bar logged in dashboard$")
+-	public void validate_tabs_for_the_global_tab_bar_logged_in_dashboard() throws Throwable {
+-		isElementDisplayed(FuelTab);
+-		isElementDisplayed(StationTab);
+-		isElementDisplayed(OffersTab);
+-		isElementDisplayed(HistoryTab);
+-		isElementDisplayed(MoreTab);
+-	}
++    @Then("^Validate tabs for the Global Tab Bar logged in dashboard$")
++    public void validate_tabs_for_the_global_tab_bar_logged_in_dashboard() throws Throwable {
++        isElementDisplayed(FuelTab);
++        isElementDisplayed(StationTab);
++        isElementDisplayed(OffersTab);
++        isElementDisplayed(HistoryTab);
++        isElementDisplayed(MoreTab);
++    }
+ 
+-	@Then("^Validate the device back button is inactive$")
+-	public void validate_the_device_back_button_is_inactive() throws Throwable {
+-		driver.navigate().back();
+-	}
++    @Then("^Validate the device back button is inactive$")
++    public void validate_the_device_back_button_is_inactive() throws Throwable {
++        driver.navigate().back();
++    }
+ 
+-	@Then("^user tap on next button$")
+-	public void user_tap_on_next_button() throws Throwable {
+-		clickButtonWithOutScroll(NextBtn);
+-	}
++    @Then("^user tap on next button$")
++    public void user_tap_on_next_button() throws Throwable {
++        clickButtonWithOutScroll(NextBtn);
++    }
+ 
+-	@Then("^Validate the Get Started button in fourth screen$")
+-	public void validate_the_get_started_button_in_fourth_screen() throws Throwable {
+-		Assert.assertTrue(isTextMatch(GetStarted_BTN.getText().trim(), AppInstallAndLaunchConstants.GETSTD));
+-	}
++    @Then("^Validate the Get Started button in fourth screen$")
++    public void validate_the_get_started_button_in_fourth_screen() throws Throwable {
++        Assert.assertTrue(isTextMatch(GetStarted_BTN.getText().trim(), AppInstallAndLaunchConstants.GETSTD));
++    }
+ 
+-	@When("^click on Get Started button$")
+-	public void clickOnGetStartedButton() {
+-		clickButtonWithOutScroll(GetStarted_BTN);
+-		waitFor(2000);
+-		if (platformName.equalsIgnoreCase("android")) {
+-			clickButtonWithOutScroll(AccountOkBtn);
+-		} else {
+-			clickButtonWithOutScroll(ContinueBtn);
+-			waitFor(3000);
+-			clickButtonWithOutScroll(AllowPopup);
+-			waitFor(2000);
+-			clickButtonWithOutScroll(AllowPopup);
+-			waitFor(2000);
+-			if (isElementDisplayed(AccountOkBtn)) {
+-				clickButtonWithOutScroll(AccountOkBtn);
+-			}
+-		}
++    @When("^click on Get Started button$")
++    public void clickOnGetStartedButton() {
++        clickButtonWithOutScroll(GetStarted_BTN);
++        waitFor(2000);
++        if (platformName.equalsIgnoreCase("android")) {
++            clickButtonWithOutScroll(AccountOkBtn);
++        } else {
++            clickButtonWithOutScroll(ContinueBtn);
++            waitFor(3000);
++            clickButtonWithOutScroll(AllowPopup);
++            waitFor(2000);
++            clickButtonWithOutScroll(AllowPopup);
++            waitFor(2000);
++            if (isElementDisplayed(AccountOkBtn)) {
++                clickButtonWithOutScroll(AccountOkBtn);
++            }
++        }
+ 
+-	}
++    }
+ 
+-	@Given("^user validates the tutorial screen$")
+-	public void userValidatesTheTutorialScreen() {
+-	//	waitFor(6000);
+-		if (platformName.equalsIgnoreCase("android")) {
+-			waitForElement(WelcomImg,6000);
+-			Assert.assertTrue(isElementDisplayed(WelcomImg));
+-			Assert.assertTrue(isTextMatch(WelcomTtl.getText().trim(),
+-					AppInstallAndLaunchConstants.Tutorial_Screen_One_Page_Title));
+-			Assert.assertTrue(
+-					isTextMatch(Subtitle.getText().trim(), AppInstallAndLaunchConstants.Tutorial_Screen_One_Sub_Title));
+-			// Assert.assertTrue(isTextContain(WelcomTtl.getText(),
+-			// AccountConstants.WELCOMTXT));
+-		} else {
+-			Assert.assertTrue(WelcomImg.isEnabled());
+-			// Assert.assertTrue(isElementEnabled(WelcomTtl));
+-			// Assert.assertTrue(isElementEnabled(WelcomSUBTtl_one));
+-		}
+-	}
++    @Given("^user validates the tutorial screen$")
++    public void userValidatesTheTutorialScreen() {
++        //	waitFor(6000);
++        if (platformName.equalsIgnoreCase("android")) {
++            waitForElement(WelcomImg, 6000);
++            Assert.assertTrue(isElementDisplayed(WelcomImg));
++            Assert.assertTrue(isTextMatch(WelcomTtl.getText().trim(),
++                    AppInstallAndLaunchConstants.Tutorial_Screen_One_Page_Title));
++            Assert.assertTrue(
++                    isTextMatch(Subtitle.getText().trim(), AppInstallAndLaunchConstants.Tutorial_Screen_One_Sub_Title));
++            // Assert.assertTrue(isTextContain(WelcomTtl.getText(),
++            // AccountConstants.WELCOMTXT));
++        } else {
++            Assert.assertTrue(WelcomImg.isEnabled());
++            // Assert.assertTrue(isElementEnabled(WelcomTtl));
++            // Assert.assertTrue(isElementEnabled(WelcomSUBTtl_one));
++        }
++    }
+ 
+-	@Then("^User validate allow notifications screen$")
+-	public void userValidateAllowNotificationsScreen() {
+-		Assert.assertTrue(isElementDisplayed(Allow_Notifications_header));
+-		Assert.assertTrue(isElementDisplayed(notification_image));
+-		Assert.assertTrue(isElementDisplayed(notification_middle_message));
+-		Assert.assertTrue(isElementDisplayed(notification_bottom_message));
+-		Assert.assertTrue(isElementDisplayed(ContinueBtn));
+-		Assert.assertTrue(
+-				isTextMatch(Allow_Notifications_header.getText().trim(), AppInstallAndLaunchConstants.Welcome_Screen_fourth_top_header));
+-		Assert.assertTrue(
+-				isTextMatch(notification_middle_message.getText().trim(), AppInstallAndLaunchConstants.Welcome_Screen_fourth_middle_message));
+-		Assert.assertTrue(
+-				isTextMatch(notification_bottom_message.getText().trim(), AppInstallAndLaunchConstants.Welcome_Screen_fourth_small_message));
+-	}
++    @Then("^User validate allow notifications screen$")
++    public void userValidateAllowNotificationsScreen() {
++        Assert.assertTrue(isElementDisplayed(Allow_Notifications_header));
++        Assert.assertTrue(isElementDisplayed(notification_image));
++        Assert.assertTrue(isElementDisplayed(notification_middle_message));
++        Assert.assertTrue(isElementDisplayed(notification_bottom_message));
++        Assert.assertTrue(isElementDisplayed(ContinueBtn));
++        Assert.assertTrue(
++                isTextMatch(Allow_Notifications_header.getText().trim(), AppInstallAndLaunchConstants.Welcome_Screen_fourth_top_header));
++        Assert.assertTrue(
++                isTextMatch(notification_middle_message.getText().trim(), AppInstallAndLaunchConstants.Welcome_Screen_fourth_middle_message));
++        Assert.assertTrue(
++                isTextMatch(notification_bottom_message.getText().trim(), AppInstallAndLaunchConstants.Welcome_Screen_fourth_small_message));
++    }
+ 
+     @Then("^User is navigated to Add Nectar Card screen$")
+     public void userIsNavigatedToAddNectarCardScreen() {
+-		staticTextValidation(add_Nectar_card, OffersContants.ADDNECTAR);
++        staticTextValidation(add_Nectar_card, OffersContants.ADDNECTAR);
+     }
+ 
+-	@And("^user validates offers screen$")
+-	public void userValidatesOffersScreen() {
+-		waitForElement(add_nectar_card_to,4);
+-		isElementDisplayed(add_nectar_card_to);
+-		isTextMatch(add_nectar_card_to.getText(),AppInstallAndLaunchConstants.Offers_Add_Nectar_to_text);
+-		isElementDisplayed(get_offers);
+-		isTextMatch(get_offers.getText(),AppInstallAndLaunchConstants.Offers_Add_Nectar_get_exclusive);
+-		isElementDisplayed(collection_points_header);
+-		isTextMatch(get_offers.getText(),AppInstallAndLaunchConstants.Offers_Add_Nectar_get_exclusive);
+-		isElementDisplayed(collection_points_message);
+-		isTextMatch(collection_points_header.getText(),AppInstallAndLaunchConstants.Offers_Add_Nectar_collection_points_header);
+-		isElementDisplayed(more_about_collecting_point_link);
+-		isTextMatch(more_about_collecting_point_link.getText(),AppInstallAndLaunchConstants.Offers_Add_Nectar_More_about_collecting_points_link);
+-		isElementDisplayed(rewards_header);
+-		isTextMatch(rewards_header.getText(),AppInstallAndLaunchConstants.Offers_Add_Nectar_Rewards_header);
+-		isElementDisplayed(rewards_text);
+-		isTextMatch(rewards_text.getText(),AppInstallAndLaunchConstants.Offers_Add_Nectar_Rewards_text);
+-		isElementDisplayed(add_nectar_card);
+-		isTextMatch(add_nectar_card.getText(),AppInstallAndLaunchConstants.Offers_Add_Nectar_card_text);
+-		if (platformName.equalsIgnoreCase("Android")) {
+-			isElementDisplayed(Add_Nectar_card_image);
+-			ScrollTo(OffersContants.COLECTMOREHEAD, AccountConstants.IOSSCROLLUP, collect_more_nectar_points);
+-			staticTextValidation(collect_more_nectar_points, OffersContants.COLECTMOREHEAD);
+-		} else {
+-			Assert.assertTrue(isElementDisplayed(collect_more_nectar_points));
+-		}
+-	}
++    @And("^user validates offers screen$")
++    public void userValidatesOffersScreen() {
++        waitForElement(add_nectar_card_to, 4);
++        isElementDisplayed(add_nectar_card_to);
++        isTextMatch(add_nectar_card_to.getText(), AppInstallAndLaunchConstants.Offers_Add_Nectar_to_text);
++        isElementDisplayed(get_offers);
++        isTextMatch(get_offers.getText(), AppInstallAndLaunchConstants.Offers_Add_Nectar_get_exclusive);
++        isElementDisplayed(collection_points_header);
++        isTextMatch(get_offers.getText(), AppInstallAndLaunchConstants.Offers_Add_Nectar_get_exclusive);
++        isElementDisplayed(collection_points_message);
++        isTextMatch(collection_points_header.getText(), AppInstallAndLaunchConstants.Offers_Add_Nectar_collection_points_header);
++        isElementDisplayed(more_about_collecting_point_link);
++        isTextMatch(more_about_collecting_point_link.getText(), AppInstallAndLaunchConstants.Offers_Add_Nectar_More_about_collecting_points_link);
++        isElementDisplayed(rewards_header);
++        isTextMatch(rewards_header.getText(), AppInstallAndLaunchConstants.Offers_Add_Nectar_Rewards_header);
++        isElementDisplayed(rewards_text);
++        isTextMatch(rewards_text.getText(), AppInstallAndLaunchConstants.Offers_Add_Nectar_Rewards_text);
++        isElementDisplayed(add_nectar_card);
++        isTextMatch(add_nectar_card.getText(), AppInstallAndLaunchConstants.Offers_Add_Nectar_card_text);
++        if (platformName.equalsIgnoreCase("Android")) {
++            isElementDisplayed(Add_Nectar_card_image);
++            ScrollTo(OffersContants.COLECTMOREHEAD, AccountConstants.IOSSCROLLUP, collect_more_nectar_points);
++            staticTextValidation(collect_more_nectar_points, OffersContants.COLECTMOREHEAD);
++        } else {
++            Assert.assertTrue(isElementDisplayed(collect_more_nectar_points));
++        }
++    }
+ 
+-	@When("^user taps on \"([^\"]*)\" link$")
+-	public void userTapsOnLink(String linkName) throws Throwable {
+-		isElementDisplayed(more_about_collecting_point_link);
+-		clickButtonWithOutScroll(more_about_collecting_point_link);
+-	}
++    @When("^user taps on \"([^\"]*)\" link$")
++    public void userTapsOnLink(String linkName) throws Throwable {
++        isElementDisplayed(more_about_collecting_point_link);
++        clickButtonWithOutScroll(more_about_collecting_point_link);
++    }
+ 
+-	@Then("^user should see How to collect points popup$")
+-	public void userShouldSeeHowToCollectPointsPopup() {
+-		waitForElement(how_to_collect_points_popup,3);
+-		isElementDisplayed(how_to_collect_points_popup);
+-		clickButtonWithOutScroll(geRewards_How_to_collect_points_popup_Close);
+-	}
++    @Then("^user should see How to collect points popup$")
++    public void userShouldSeeHowToCollectPointsPopup() {
++        waitForElement(how_to_collect_points_popup, 3);
++        isElementDisplayed(how_to_collect_points_popup);
++        clickButtonWithOutScroll(geRewards_How_to_collect_points_popup_Close);
++    }
+ 
+ //	@And("^user enters the nectar card number$")
+ //	public void userEntersTheNectarCardNumber() {
+@@ -315,72 +315,74 @@
+ 
+     @And("^Click on skipp button in Welcome screen$")
+     public void clickOnSkippButtonInWelcomeScreen() {
+-		waitForElement(TutorialSkipButton,3);
+-		clickButtonWithOutScroll(TutorialSkipButton);
+-		clickButtonWithOutScroll(ContinueBtn);
+-		clickButtonWithOutScroll(AllowPopup);
++        waitForElement(TutorialSkipButton, 3);
++        clickButtonWithOutScroll(TutorialSkipButton);
++        clickButtonWithOutScroll(ContinueBtn);
++        clickButtonWithOutScroll(AllowPopup);
+     }
+ 
+-	@Then("^Verify the CT text popup text displayed in NLID screen$")
+-	public void verifyTheCTTextPopupTextDisplayedInNLIDScreen() {
+-		waitFor(2000);
+-		Assert.assertTrue(isElementDisplayed(CtTextLIDScreen));
+-		clickButtonWithOutScroll(OkButtonCTText);
+-	}
+-	@Then("^verify that User is able to see Welcome screen$")
+-	public void verifyThatUserIsAbleToSeeWelcomeScreen() {
+-		if (platformName.equalsIgnoreCase("Android")) {
+-			waitForElement(WelcomTtl, 14);
+-			staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_One_Page_Title);
+-		} else {
++    @Then("^Verify the CT text popup text displayed in NLID screen$")
++    public void verifyTheCTTextPopupTextDisplayedInNLIDScreen() {
++        waitFor(2000);
++        Assert.assertTrue(isElementDisplayed(CtTextLIDScreen));
++        clickButtonWithOutScroll(OkButtonCTText);
++    }
++
++    @Then("^verify that User is able to see Welcome screen$")
++    public void verifyThatUserIsAbleToSeeWelcomeScreen() {
++        if (platformName.equalsIgnoreCase("Android")) {
++            waitForElement(WelcomTtl, 14);
++            staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_One_Page_Title);
++        } else {
+ 
+-			staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_One_Page_Title_ios);
+-		}
+-		}
++            staticTextValidation(WelcomTtl, AppInstallAndLaunchConstants.Tutorial_Screen_One_Page_Title_ios);
++        }
++    }
+ 
+-	@And("^Swipe left and right from welcome screen$")
+-	public void swipeLeftAndRightFromWelcomeScreen() {
+-		waitFor(2000);
+-		clickButtonWithOutScroll(NextButtonScreen);
++    @And("^Swipe left and right from welcome screen$")
++    public void swipeLeftAndRightFromWelcomeScreen() {
++        waitFor(2000);
++        clickButtonWithOutScroll(NextButtonScreen);
+ 
+-	}
++    }
+ 
+-	@And("^User enter \"([^\"]*)\" Login credentials$")
+-	public void userEnterLoginCredentials(String arg0) throws Throwable {
+-		waitFor(5000);
+-		enterTextWithoutScroll(userName, AppInstallAndLaunchConstants.UN1);
+-		waitFor(3000);
+-		enterTextWithoutScroll(password, AppInstallAndLaunchConstants.PWD1);
+-	}
++    @And("^User enter \"([^\"]*)\" Login credentials$")
++    public void userEnterLoginCredentials(String arg0) throws Throwable {
++        waitFor(5000);
++        enterTextWithoutScroll(userName, AppInstallAndLaunchConstants.UN1);
++        waitFor(3000);
++        enterTextWithoutScroll(password, AppInstallAndLaunchConstants.PWD1);
++    }
+ 
+-	@And("^Verify the Nectar Card points in LID screen$")
+-	public void verifyTheNectarCardPointsInLIDScreen() {
+-		waitFor(5000);
+-		if(isElementDisplayedWithoutAssert(CloseNectarPopup))
+-			clickButtonWithOutScroll(CloseNectarPopup);
+-		if(platformName.equalsIgnoreCase("Android")) {
+-			staticTextValidation(NectarPointBalanceLeftText,AppInstallAndLaunchConstants.NECTARBALANCETXT1);
+-			staticTextValidation(NectarPointBalanceRightText,AppInstallAndLaunchConstants.NECTARBALANCETXT2);
+-			Assert.assertTrue(isElementDisplayed(NectarPointBalanceValue));
+-		} else {
+-			Assert.assertTrue(isElementDisplayed(NectarPointBalance));
+-		}
+-	}
++    @And("^Verify the Nectar Card points in LID screen$")
++    public void verifyTheNectarCardPointsInLIDScreen() {
++        waitFor(5000);
++        if (isElementDisplayedWithoutAssert(CloseNectarPopup))
++            clickButtonWithOutScroll(CloseNectarPopup);
++        if (platformName.equalsIgnoreCase("Android")) {
++            staticTextValidation(NectarPointBalanceLeftText, AppInstallAndLaunchConstants.NECTARBALANCETXT1);
++            staticTextValidation(NectarPointBalanceRightText, AppInstallAndLaunchConstants.NECTARBALANCETXT2);
++            Assert.assertTrue(isElementDisplayed(NectarPointBalanceValue));
++        } else {
++            Assert.assertTrue(isElementDisplayed(NectarPointBalance));
++        }
++    }
+ 
+-	@And("^Verify that User should be able to see the tick mark for loaded card$")
+-	public void verifyThatUserShouldBeAbleToSeeTheTickMarkForLoadedCard() {
+-		waitFor(5000);
+-		Assert.assertTrue(isElementEnabled(OfferAppliedTickMark));
+-		Assert.assertTrue(isElementEnabled(OffersBannerPanen));
++    @And("^Verify that User should be able to see the tick mark for loaded card$")
++    public void verifyThatUserShouldBeAbleToSeeTheTickMarkForLoadedCard() {
++        waitFor(5000);
++        Assert.assertTrue(isElementEnabled(OfferAppliedTickMark));
++        Assert.assertTrue(isElementEnabled(OffersBannerPanen));
+ 
+-	}
+-	@Then("^user validates first tutorial screen$")
+-	public void userValidatesFirstTutorialScreen() {
+-		waitFor(10);
+-		waitForElement(CarImageWelScreen,20);
+-		Assert.assertTrue(CarImageWelScreen.isDisplayed());
+-		Assert.assertTrue(EssoLogo.isDisplayed());
+-	}
++    }
++
++    @Then("^user validates first tutorial screen$")
++    public void userValidatesFirstTutorialScreen() {
++        waitFor(10);
++        waitForElement(CarImageWelScreen, 20);
++        Assert.assertTrue(CarImageWelScreen.isDisplayed());
++        Assert.assertTrue(EssoLogo.isDisplayed());
++    }
+ 
+ //	@And("^User click on get Started Button$")
+ //	public void userClickOnGetStartedButton() {
+@@ -413,45 +415,45 @@
+ //		}
+ //	}
+ 
+-	@Then("^click on allow button$")
+-	public void clickOnAllowButton() {
+-		waitForElement(AllowInPopupScreen,20);
+-		clickButtonWithOutScroll(AllowInPopupScreen);
+-	}
++    @Then("^click on allow button$")
++    public void clickOnAllowButton() {
++        waitForElement(AllowInPopupScreen, 20);
++        clickButtonWithOutScroll(AllowInPopupScreen);
++    }
+ 
+-	@Then("^Verify elements present in second screen$")
+-	public void verifyElementsPresentInSecondScreen() {
+-		waitFor(4000);
+-		waitForElement(Screen2Tittle,20);
+-		staticTextValidation(Screen2Tittle, AppInstallAndLaunchConstants.ScreenTitleText);
+-		staticTextValidation(Screen2SubTittle, AppInstallAndLaunchConstants.ScreenSubTitleText);
+-	}
++    @Then("^Verify elements present in second screen$")
++    public void verifyElementsPresentInSecondScreen() {
++        waitFor(4000);
++        waitForElement(Screen2Tittle, 20);
++        staticTextValidation(Screen2Tittle, AppInstallAndLaunchConstants.ScreenTitleText);
++        staticTextValidation(Screen2SubTittle, AppInstallAndLaunchConstants.ScreenSubTitleText);
++    }
+ 
+-	@Then("^Verify the Cookie page elements$")
+-	public void verifyTheCookiePageElements() {
+-		
+-		waitFor(2000);
+-		if (platformName.equalsIgnoreCase("android")) {
+-			waitForElement(acceptAllButtonAppLaunch,20);
+-			staticTextValidation(CookieSubText1AppLaunch, AppInstallAndLaunchConstants.CookieSubTextAnd1);
+-			Assert.assertTrue(acceptAllButtonAppLaunch.isEnabled());
+-			Assert.assertTrue(manageOptionButtonAppLaunch.isEnabled());
+-		} else {
+-			waitForElement(acceptAllButtonAppLaunch,20);
+-			staticTextValidation(CookieSubText1AppLaunch, AppInstallAndLaunchConstants.CookieSubText1);
+-			staticTextValidation(CookieSubText2AppLaunch, AppInstallAndLaunchConstants.CookieSubText2);
+-			Assert.assertTrue(acceptAllButtonAppLaunch.isEnabled());
+-			Assert.assertTrue(getButtonElement("Manage Options").isEnabled());
+-		
+-		}
++    @Then("^Verify the Cookie page elements$")
++    public void verifyTheCookiePageElements() {
++
++        waitFor(2000);
++        if (platformName.equalsIgnoreCase("android")) {
++            waitForElement(acceptAllButtonAppLaunch, 20);
++            staticTextValidation(CookieSubText1AppLaunch, AppInstallAndLaunchConstants.CookieSubTextAnd1);
++            Assert.assertTrue(acceptAllButtonAppLaunch.isEnabled());
++            Assert.assertTrue(manageOptionButtonAppLaunch.isEnabled());
++        } else {
++            waitForElement(acceptAllButtonAppLaunch, 20);
++            staticTextValidation(CookieSubText1AppLaunch, AppInstallAndLaunchConstants.CookieSubText1);
++            staticTextValidation(CookieSubText2AppLaunch, AppInstallAndLaunchConstants.CookieSubText2);
++            Assert.assertTrue(acceptAllButtonAppLaunch.isEnabled());
++            Assert.assertTrue(getButtonElement("Manage Options").isEnabled());
++
++        }
+ 
+-	}
++    }
+ 
+-	@And("^Click Accept all button in the cookie page$")
+-	public void clickAcceptAllButtonInTheCookiePage() {
+-		waitForElement(acceptAllButtonAppLaunch,20);
+-		clickButtonWithOutScroll(acceptAllButtonAppLaunch);
+-	}
++    @And("^Click Accept all button in the cookie page$")
++    public void clickAcceptAllButtonInTheCookiePage() {
++        waitForElement(acceptAllButtonAppLaunch, 20);
++        clickButtonWithOutScroll(acceptAllButtonAppLaunch);
++    }
+ 
+ 
+ //	@Given("^install open the Esso app$")
+@@ -476,66 +478,164 @@
+ //
+ //	}
+ 
+-	@And("^user taps on SKIP button in the tutorial screen$")
+-	public void userTapsOnSKIPButtonInTheTutorialScreen() {
+-		clickButtonWithOutScroll(TutorialSkipButton);
+-	}
++    @And("^user taps on SKIP button in the tutorial screen$")
++    public void userTapsOnSKIPButtonInTheTutorialScreen() {
++        clickButtonWithOutScroll(TutorialSkipButton);
++    }
+ 
+-	@Then("^user navigates across the tutorial screens$")
+-	public void userNavigatesAcrossTheTutorialScreens() {
+-		if (platformName.equalsIgnoreCase("iOS")) {
+-			waitForElement(ContinueBtn,10);
+-			Assert.assertTrue(ContinueBtn.isEnabled());
+-		} else {
+-			waitForElement(AccountOkBtn,10);
+-			Assert.assertTrue(AccountOkBtn.isEnabled());
+-		}
+-	}
++    @Then("^user navigates across the tutorial screens$")
++    public void userNavigatesAcrossTheTutorialScreens() {
++        if (platformName.equalsIgnoreCase("iOS")) {
++            waitForElement(ContinueBtn, 10);
++            Assert.assertTrue(ContinueBtn.isEnabled());
++        } else {
++            waitForElement(AccountOkBtn, 10);
++            Assert.assertTrue(AccountOkBtn.isEnabled());
++        }
++    }
+ 
+-	@When("^user taps on Get Started button in the tutorial screen$")
+-	public void userTapsOnGetStartedButtonInTheTutorialScreen() {
+-		clickButtonWithOutScroll(exxon_Help_Tutorial_GetStartedBtn);
+-	}
++    @When("^user taps on Get Started button in the tutorial screen$")
++    public void userTapsOnGetStartedButtonInTheTutorialScreen() {
++        clickButtonWithOutScroll(exxon_Help_Tutorial_GetStartedBtn);
++    }
+ 
+-	@When("^click on Get Started button on Add Nectar Card screen$")
+-	public void clickOnGetStartedButtonOnAddNectarCardScreen() {
+-		waitForElement(AddNectarGetStartedBtn,30);
+-		clickButtonWithOutScroll(AddNectarGetStartedBtn);
+-	}
++    @When("^click on Get Started button on Add Nectar Card screen$")
++    public void clickOnGetStartedButtonOnAddNectarCardScreen() {
++        waitForElement(AddNectarGetStartedBtn, 30);
++        clickButtonWithOutScroll(AddNectarGetStartedBtn);
++    }
+ 
+-	@Then("^Validate the welcome pop-up message$")
+-	public void verifywelcomepopupmessage(){
+-		if (platformName.equalsIgnoreCase("iOS")) {
+-			waitForElement(welcomePopup,10);
+-			staticTextValidation(welcomePopup,AppInstallAndLaunchConstants.CTNLIDText);
+-		} else {
+-			webDriverWaitForElement(10).until(ExpectedConditions.visibilityOf(welcomePopup));
+-			staticTextValidation(welcomePopup,AppInstallAndLaunchConstants.CTNLIDText);
+-		}
+-	}
++    @Then("^Validate the welcome pop-up message$")
++    public void verifywelcomepopupmessage() {
++        if (platformName.equalsIgnoreCase("iOS")) {
++            waitForElement(welcomePopup, 10);
++            staticTextValidation(welcomePopup, AppInstallAndLaunchConstants.CTNLIDText);
++        } else {
++            webDriverWaitForElement(10).until(ExpectedConditions.visibilityOf(welcomePopup));
++            staticTextValidation(welcomePopup, AppInstallAndLaunchConstants.CTNLIDText);
++        }
++    }
+ 
+-	@And("^user clicks on GET STARTED button$")
+-	public void clickGETSTARTED(){
+-		clickButtonWithOutScroll(GETSTARTEDBut);
+-		if (platformName.equalsIgnoreCase("iOS")) {
+-			clickButtonWithOutScroll(ContinueBtn);
+-			clickButtonWithOutScroll(AllowPopup);
+-			waitFor(4000);
+-			if (isElementDisplayedWithoutAssert(Allow)) {
+-				clickButtonWithOutScroll(Allow);
+-			}
+-		}
+-	}
++    @And("^user clicks on GET STARTED button$")
++    public void clickGETSTARTED() {
++        clickButtonWithOutScroll(GETSTARTEDBut);
++        if (platformName.equalsIgnoreCase("iOS")) {
++            clickButtonWithOutScroll(ContinueBtn);
++            clickButtonWithOutScroll(AllowPopup);
++            waitFor(4000);
++            if (isElementDisplayedWithoutAssert(Allow)) {
++                clickButtonWithOutScroll(Allow);
++            }
++        }
++    }
+ 
+-	@And("^user validates whether the Reject all button is present in the privacy screen$")
+-	public void userValidatesWhetherTheRejectAllButtonIsPresentInThePrivacyScreen() {
+-		waitForElement(rejectAllButtonAppLaunch, 30);
+-		staticTextValidation(rejectAllButtonAppLaunch, AppInstallAndLaunchConstants.REJECTALLBUTTONPRIVACYSCREEEN);
+-	}
++    @And("^user validates whether the Reject all button is present in the privacy screen$")
++    public void userValidatesWhetherTheRejectAllButtonIsPresentInThePrivacyScreen() {
++        waitForElement(rejectAllButtonAppLaunch, 30);
++        staticTextValidation(rejectAllButtonAppLaunch, AppInstallAndLaunchConstants.REJECTALLBUTTONPRIVACYSCREEEN);
++    }
+ 
+-	@When("^the user taps on the Reject all button in the privacy screen$")
+-	public void theUserTapsOnTheRejectAllButtonInThePrivacyScreen() {
+-		waitForElement(rejectAllButtonAppLaunch, 40);
+-		clickButtonWithOutScroll(rejectAllButtonAppLaunch);
+-	}
++    @When("^the user taps on the Reject all button in the privacy screen$")
++    public void theUserTapsOnTheRejectAllButtonInThePrivacyScreen() {
++        waitForElement(rejectAllButtonAppLaunch, 40);
++        clickButtonWithOutScroll(rejectAllButtonAppLaunch);
++    }
++
++    @Then("user should redirect to Data Privacy landing page screen")
++    public void userShouldRedirectToDataPrivacyLandingPageScreen() {
++        waitForElement(manageOptionButtonAppLaunch);
++        Assert.assertTrue(isElementDisplayed(manageOptionButtonAppLaunch));
++    }
++
++    @When("user taps on manage options")
++    public void userTapsOnManageOptions() {
++        clickButtonWithOutScroll(manageOptionButtonAppLaunch);
++    }
++
++    @Then("user should redirect to Manage your cookie settings screen")
++    public void userShouldRedirectToManageYourCookieSettingsScreen() {
++        Assert.assertTrue(isElementDisplayed(CookieSubText1AppLaunch));
++    }
++
++    @Then("user should view title as Analytics & Performance for the analytics section")
++    public void userShouldViewTitleAsAnalyticsPerformanceForTheAnalyticsSection() {
++        String Actual = AnalyticsAndPerformance.getText();
++        Assert.assertEquals(Actual, AppInstallAndLaunchConstants.ANALYTICSANDPERFORMANCETITLE);
++    }
++
++    @Then("user should see Analytics & Performance checkbox for the analytics section")
++    public void userShouldSeeAnalyticsPerformanceCheckboxForTheAnalyticsSection() {
++        Assert.assertTrue(isElementDisplayed(AnalyticsAndPerformanceCheckbox));
++    }
++
++    @Then("user should see the copy text as the content in the Analytics & Performance section")
++    public void userShouldSeeTheCopyTextAsTheContentInTheAnalyticsPerformanceSection() {
++        String actual = AnalyticsAndPerformanceSectionCT.getText();
++        Assert.assertEquals(actual, AppInstallAndLaunchConstants.ANALYTICSANDPERFORMANCESECTIONCT);
++    }
++
++    @Then("user should be able to select Analytics & Performance checkbox")
++    public void userShouldBeAbleToSelectAnalyticsPerformanceCheckbox() {
++        clickButtonWithOutScroll(AnalyticsAndPerformanceCheckbox);
++        waitFor(3000);
++        Assert.assertTrue(AnalyticsAndPerformanceCheckbox.isEnabled());
++    }
++
++    @Then("user should be able to unselect Analytics & Performance checkbox")
++    public void userShouldBeAbleToUnselectAnalyticsPerformanceCheckbox() {
++        clickButtonWithOutScroll(AnalyticsAndPerformanceCheckbox);
++        Assert.assertFalse(AnalyticsAndPerformanceCheckbox.isSelected());
++    }
++
++    @Then("user should view title as Functional for the Functional section")
++    public void userShouldViewTitleAsFunctionalForTheFunctionalSection() {
++        String Actual = Functional.getText();
++        Assert.assertEquals(Actual, AppInstallAndLaunchConstants.FUNCTIONALTITLE);
++    }
++
++    @Then("user should see Functional checkbox for the Functional section")
++    public void userShouldSeeFunctionalCheckboxForTheFunctionalSection() {
++        Assert.assertTrue(isElementDisplayed(FunctionalCheckbox));
++    }
++
++    @Then("user should see the copy text as the content in the Functional section")
++    public void userShouldSeeTheCopyTextAsTheContentInTheFunctionalSection() {
++        String actual = FunctionalSectionCT.getText();
++        Assert.assertEquals(actual, AppInstallAndLaunchConstants.FUNCTIONSECTIONCT);
++    }
++
++    @Then("user should be able to select Functional checkbox")
++    public void userShouldBeAbleToSelectFunctionalCheckbox() {
++        clickButtonWithOutScroll(FunctionalCheckbox);
++        waitFor(3000);
++        Assert.assertTrue(FunctionalCheckbox.isEnabled());
++    }
++
++    @Then("user should be able to unselect Functional checkbox")
++    public void userShouldBeAbleToUnselectFunctionalCheckbox() {
++        clickButtonWithOutScroll(FunctionalCheckbox);
++        Assert.assertFalse(FunctionalCheckbox.isSelected());
++    }
++
++    @When("user taps on confirm on manage your cookie settings screen")
++    public void userTapsOnConfirmOnManageYourCookieSettingsScreen() {
++        clickButtonWithOutScroll(ConfirmOnCookieSettings);
++    }
++
++    @Then("user should redirected to tutorial screen")
++    public void userShouldRedirectedToTutorialScreen() {
++        waitForElement(WelcomTtl);
++        Assert.assertTrue(isElementDisplayed(WelcomTtl));
++    }
++
++    @When("user taps back on manage your cookie settings screen")
++    public void userTapsBackOnManageYourCookieSettingsScreen() {
++    androidBack();
++    }
++
++    @Then("App should show the selected options retained")
++    public void appShouldShowTheSelectedOptionsRetained() {
++        Assert.assertTrue(AnalyticsAndPerformanceCheckbox.isEnabled());
++        Assert.assertTrue(FunctionalCheckbox.isEnabled());
++    }
+ }
+Index: src/test/java/stepDefinitions/AppLaunchSteps.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/stepDefinitions/AppLaunchSteps.java b/src/test/java/stepDefinitions/AppLaunchSteps.java
+--- a/src/test/java/stepDefinitions/AppLaunchSteps.java	(revision e353df14ba5aaa31423a6dd2ac5b427141a7db81)
++++ b/src/test/java/stepDefinitions/AppLaunchSteps.java	(revision 6bc3a2f47f54e366cd80fd48417dff1e88fe1cb2)
+@@ -21,7 +21,7 @@
+         waitForElement(acceptAllButtonAppLaunch, 20);
+         clickButtonWithOutScroll(acceptAllButtonAppLaunch);
+ 
+-        waitForElement(TutorialSkipButton,10);
++        waitForElement(TutorialSkipButton, 10);
+         Assert.assertTrue(TutorialSkipButton.isEnabled());
+         Assert.assertTrue(welComeScreen.isDisplayed());
+         if (platformName.equalsIgnoreCase("android")) {
+@@ -37,7 +37,7 @@
+     public void verifyPaySecurelyFromYourCarScreenDisplayed() {
+ //        waitFor(5000);
+         clickButtonWithOutScroll(tutorialNextButton);
+-        waitForElement(TutorialScreen2Title,5);
++        waitForElement(TutorialScreen2Title, 5);
+         staticTextValidation(TutorialScreen2Title, AppLaunchConstants.Tutorial_PaySecurelyTitle);
+         Assert.assertTrue(TutorialSkipButton.isEnabled());
+         Assert.assertTrue(WelcomSUBTtl_2.isDisplayed());
+@@ -71,7 +71,7 @@
+         waitForElement(acceptAllButtonAppLaunch, 20);
+         clickButtonWithOutScroll(acceptAllButtonAppLaunch);
+ 
+-        waitForElement(TutorialSkipButton,10);
++        waitForElement(TutorialSkipButton, 10);
+ //        Assert.assertTrue(subTitleText.isDisplayed());
+         Assert.assertTrue(TutorialSkipButton.isEnabled());
+         Assert.assertTrue(welComeScreen.isDisplayed());
+@@ -102,8 +102,8 @@
+ 
+     @And("^Accept all the cookies$")
+     public void accept_all_the_cookies() throws Throwable {
+-            waitForElement(acceptAllButtonAppLaunch,20);
+-            clickButtonWithOutScroll(acceptAllButtonAppLaunch);
++        waitForElement(acceptAllButtonAppLaunch, 20);
++        clickButtonWithOutScroll(acceptAllButtonAppLaunch);
+     }
+ 
+     @And("^Uninstall the app$")

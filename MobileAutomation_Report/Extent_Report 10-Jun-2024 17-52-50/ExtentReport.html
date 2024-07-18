@@ -1,0 +1,1778 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Fiserv UK Automation</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Fiserv Mobile - Automation</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jun 10, 2024 05:52:50 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@P11270-21740</a><a class="dropdown-item" href="#">@P11270-21742</a><a class="dropdown-item" href="#">@App_Install_Launch</a><a class="dropdown-item" href="#">@P11270-21715</a><a class="dropdown-item" href="#">@P11270-21713</a><a class="dropdown-item" href="#">@AndroidRegressionSet2</a><a class="dropdown-item" href="#">@P11270-21716</a><a class="dropdown-item" href="#">@Sprintandroid2413</a><a class="dropdown-item" href="#">@AndroidRegression</a><a class="dropdown-item" href="#">@P11270-21741</a><a class="dropdown-item" href="#">@P11270-21744</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">App_Install_Launch</p>
+            <p class="text-sm">
+              <span>5:52:51 pm</span> / <span>00:06:43:823</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">App_Install_Launch</h5>
+<span class='badge badge-success'>06.10.2024 5:52:51 pm</span>
+<span class='badge badge-danger'>06.10.2024 5:59:35 pm</span>
+<span class='badge badge-default'>00:06:43:823</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify for user privacy policy selection in settings screen</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.reset_the_app()">
+                <span>Given reset the app</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayCookieSetting()">
+                <span>Then application should display cookie setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayAcceptAllButton()">
+                <span>Then application should display Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayRejectAllButton()">
+                <span>Then application should display Reject All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayManageOptionsButton()">
+                <span>Then application should display Manage Options button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnAcceptAllButton()">
+                <span>When user taps on Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.validate_second_screen()">
+                <span>Then Validate second screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.validate_third_screen()">
+                <span>Then Validate third screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnGetStartedButtonInTheTutorialScreen()">
+                <span>When user taps on Get Started button in the tutorial screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userAllowsNotification()">
+                <span>Then user allows notification</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.clickOnOKButtonOnNLID()">
+                <span>Then click on OK button on NLID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AccountSteps.user_taps_on_More_button_in_tab_bar()">
+                <span>And user taps on More button in tab bar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.MenuSteps.userTapsOnSettingsButtonInMoreScreen()">
+                <span>And user taps on settings button in more screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayLocationServices()">
+                <span>Then app should display Location Services</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayNotifications()">
+                <span>Then app should display Notifications</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayCameraAccess()">
+                <span>Then app should display Camera Access</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayAnalyticsAndPerformance()">
+                <span>Then app should display Analytics and Performance</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayFunctional()">
+                <span>Then app should display Functional</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="45"><span class="badge log pass-bg mr-2">Pass</span>Verify for the Analytics & Performance section under Cookie Settings in settings screen</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.reset_the_app()">
+                <span>Given reset the app</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayCookieSetting()">
+                <span>Then application should display cookie setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayAcceptAllButton()">
+                <span>Then application should display Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayRejectAllButton()">
+                <span>Then application should display Reject All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayManageOptionsButton()">
+                <span>Then application should display Manage Options button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnAcceptAllButton()">
+                <span>When user taps on Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.validate_second_screen()">
+                <span>Then Validate second screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.validate_third_screen()">
+                <span>Then Validate third screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnGetStartedButtonInTheTutorialScreen()">
+                <span>When user taps on Get Started button in the tutorial screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userAllowsNotification()">
+                <span>Then user allows notification</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.clickOnOKButtonOnNLID()">
+                <span>Then click on OK button on NLID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AccountSteps.user_taps_on_More_button_in_tab_bar()">
+                <span>And user taps on More button in tab bar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.MenuSteps.userTapsOnSettingsButtonInMoreScreen()">
+                <span>And user taps on settings button in more screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayLocationServices()">
+                <span>Then app should display Location Services</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayNotifications()">
+                <span>Then app should display Notifications</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayCameraAccess()">
+                <span>Then app should display Camera Access</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayAnalyticsAndPerformance()">
+                <span>Then app should display Analytics and Performance</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="86"><span class="badge log pass-bg mr-2">Pass</span>Verify for the Functional section under Cookie Settings in settings screen</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.reset_the_app()">
+                <span>Given reset the app</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayCookieSetting()">
+                <span>Then application should display cookie setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayAcceptAllButton()">
+                <span>Then application should display Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayRejectAllButton()">
+                <span>Then application should display Reject All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayManageOptionsButton()">
+                <span>Then application should display Manage Options button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnAcceptAllButton()">
+                <span>When user taps on Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.validate_second_screen()">
+                <span>Then Validate second screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.validate_third_screen()">
+                <span>Then Validate third screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnGetStartedButtonInTheTutorialScreen()">
+                <span>When user taps on Get Started button in the tutorial screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userAllowsNotification()">
+                <span>Then user allows notification</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.clickOnOKButtonOnNLID()">
+                <span>Then click on OK button on NLID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AccountSteps.user_taps_on_More_button_in_tab_bar()">
+                <span>And user taps on More button in tab bar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.MenuSteps.userTapsOnSettingsButtonInMoreScreen()">
+                <span>And user taps on settings button in more screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayLocationServices()">
+                <span>Then app should display Location Services</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayNotifications()">
+                <span>Then app should display Notifications</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayCameraAccess()">
+                <span>Then app should display Camera Access</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayFunctional()">
+                <span>Then app should display Functional</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="127"><span class="badge log pass-bg mr-2">Pass</span>Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.reset_the_app()">
+                <span>Given reset the app</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayCookieSetting()">
+                <span>Then application should display cookie setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayAcceptAllButton()">
+                <span>Then application should display Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayRejectAllButton()">
+                <span>Then application should display Reject All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayManageOptionsButton()">
+                <span>Then application should display Manage Options button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnAcceptAllButton()">
+                <span>When user taps on Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.validate_second_screen()">
+                <span>Then Validate second screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.validate_third_screen()">
+                <span>Then Validate third screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnGetStartedButtonInTheTutorialScreen()">
+                <span>When user taps on Get Started button in the tutorial screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userAllowsNotification()">
+                <span>Then user allows notification</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.clickOnOKButtonOnNLID()">
+                <span>Then click on OK button on NLID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AccountSteps.user_taps_on_More_button_in_tab_bar()">
+                <span>And user taps on More button in tab bar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.MenuSteps.userTapsOnSettingsButtonInMoreScreen()">
+                <span>And user taps on settings button in more screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayLocationServices()">
+                <span>Then app should display Location Services</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayNotifications()">
+                <span>Then app should display Notifications</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayCameraAccess()">
+                <span>Then app should display Camera Access</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayAnalyticsAndPerformance()">
+                <span>Then app should display Analytics and Performance</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTogglesAnalyticsPerformanceToAllow()">
+                <span>Then user toggles Analytics & Performance to allow</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="170"><span class="badge log pass-bg mr-2">Pass</span>Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.reset_the_app()">
+                <span>Given reset the app</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayCookieSetting()">
+                <span>Then application should display cookie setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayAcceptAllButton()">
+                <span>Then application should display Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayRejectAllButton()">
+                <span>Then application should display Reject All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayManageOptionsButton()">
+                <span>Then application should display Manage Options button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnAcceptAllButton()">
+                <span>When user taps on Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.validate_second_screen()">
+                <span>Then Validate second screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.validate_third_screen()">
+                <span>Then Validate third screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnGetStartedButtonInTheTutorialScreen()">
+                <span>When user taps on Get Started button in the tutorial screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userAllowsNotification()">
+                <span>Then user allows notification</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.clickOnOKButtonOnNLID()">
+                <span>Then click on OK button on NLID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AccountSteps.user_taps_on_More_button_in_tab_bar()">
+                <span>And user taps on More button in tab bar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.MenuSteps.userTapsOnSettingsButtonInMoreScreen()">
+                <span>And user taps on settings button in more screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayLocationServices()">
+                <span>Then app should display Location Services</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayNotifications()">
+                <span>Then app should display Notifications</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayCameraAccess()">
+                <span>Then app should display Camera Access</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayFunctional()">
+                <span>Then app should display Functional</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTogglesFunctionalToAllow()">
+                <span>Then user toggles Functional to allow</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="213"><span class="badge log pass-bg mr-2">Pass</span>Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.reset_the_app()">
+                <span>Given reset the app</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayCookieSetting()">
+                <span>Then application should display cookie setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayAcceptAllButton()">
+                <span>Then application should display Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayRejectAllButton()">
+                <span>Then application should display Reject All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayManageOptionsButton()">
+                <span>Then application should display Manage Options button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnAcceptAllButton()">
+                <span>When user taps on Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.validate_second_screen()">
+                <span>Then Validate second screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.validate_third_screen()">
+                <span>Then Validate third screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnGetStartedButtonInTheTutorialScreen()">
+                <span>When user taps on Get Started button in the tutorial screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userAllowsNotification()">
+                <span>Then user allows notification</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.clickOnOKButtonOnNLID()">
+                <span>Then click on OK button on NLID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AccountSteps.user_taps_on_More_button_in_tab_bar()">
+                <span>And user taps on More button in tab bar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.MenuSteps.userTapsOnSettingsButtonInMoreScreen()">
+                <span>And user taps on settings button in more screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayLocationServices()">
+                <span>Then app should display Location Services</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayNotifications()">
+                <span>Then app should display Notifications</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayCameraAccess()">
+                <span>Then app should display Camera Access</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayAnalyticsAndPerformance()">
+                <span>Then app should display Analytics and Performance</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTogglesAnalyticsPerformanceToDecline()">
+                <span>Then user toggles Analytics & Performance to decline</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="256"><span class="badge log pass-bg mr-2">Pass</span>Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.reset_the_app()">
+                <span>Given reset the app</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayCookieSetting()">
+                <span>Then application should display cookie setting</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayAcceptAllButton()">
+                <span>Then application should display Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayRejectAllButton()">
+                <span>Then application should display Reject All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.applicationShouldDisplayManageOptionsButton()">
+                <span>Then application should display Manage Options button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnAcceptAllButton()">
+                <span>When user taps on Accept All button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.validate_second_screen()">
+                <span>Then Validate second screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.user_tap_on_next_button()">
+                <span>When user tap on next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.OffersSteps.validate_third_screen()">
+                <span>Then Validate third screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTapsOnGetStartedButtonInTheTutorialScreen()">
+                <span>When user taps on Get Started button in the tutorial screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userAllowsNotification()">
+                <span>Then user allows notification</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.clickOnOKButtonOnNLID()">
+                <span>Then click on OK button on NLID</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AccountSteps.user_taps_on_More_button_in_tab_bar()">
+                <span>And user taps on More button in tab bar</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.MenuSteps.userTapsOnSettingsButtonInMoreScreen()">
+                <span>And user taps on settings button in more screen</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayLocationServices()">
+                <span>Then app should display Location Services</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayNotifications()">
+                <span>Then app should display Notifications</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayCameraAccess()">
+                <span>Then app should display Camera Access</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.appShouldDisplayFunctional()">
+                <span>Then app should display Functional</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="stepDefinitions.AppInstallAndLaunchSteps.userTogglesFunctionalToDecline()">
+                <span>Then user toggles Functional to decline</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">11</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@P11270-21740</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@P11270-21740</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:55:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='127'>Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@P11270-21742</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@P11270-21742</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:57:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='213'>Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">@App_Install_Launch</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@App_Install_Launch</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:52:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify for user privacy policy selection in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for user privacy policy selection in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:53:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>Verify for the Analytics & Performance section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Analytics & Performance section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:54:47 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>Verify for the Functional section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Functional section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:55:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='127'>Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:56:41 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='170'>Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:57:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='213'>Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:58:37 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='256'>Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@P11270-21715</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@P11270-21715</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:53:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>Verify for the Analytics & Performance section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Analytics & Performance section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@P11270-21713</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@P11270-21713</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:52:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify for user privacy policy selection in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for user privacy policy selection in settings screen</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">@AndroidRegressionSet2</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AndroidRegressionSet2</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:52:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify for user privacy policy selection in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for user privacy policy selection in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:53:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>Verify for the Analytics & Performance section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Analytics & Performance section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:54:47 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>Verify for the Functional section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Functional section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:55:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='127'>Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:56:41 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='170'>Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:57:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='213'>Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:58:37 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='256'>Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@P11270-21716</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@P11270-21716</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:54:47 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>Verify for the Functional section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Functional section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">@Sprintandroid2413</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Sprintandroid2413</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:52:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify for user privacy policy selection in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for user privacy policy selection in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:53:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>Verify for the Analytics & Performance section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Analytics & Performance section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:54:47 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>Verify for the Functional section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Functional section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:55:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='127'>Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:56:41 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='170'>Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:57:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='213'>Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:58:37 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='256'>Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>7</span>
+</span>
+<p class="name">@AndroidRegression</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@AndroidRegression</h4>
+<span status="pass" class='badge log pass-bg'>7 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:52:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify for user privacy policy selection in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for user privacy policy selection in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:53:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>Verify for the Analytics & Performance section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Analytics & Performance section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:54:47 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='86'>Verify for the Functional section under Cookie Settings in settings screen</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify for the Functional section under Cookie Settings in settings screen</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:55:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='127'>Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:56:41 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='170'>Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:57:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='213'>Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Analytics & Performance from the ‘Setting' screen.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:58:37 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='256'>Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@P11270-21741</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@P11270-21741</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:56:41 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='170'>Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to allow accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@P11270-21744</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@P11270-21744</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:58:37 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='256'>Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</a>
+<div class="">
+<span class="badge badge-default">App_Install_Launch.Verify the user should able to decline accept the user privacy settings for Functional from the ‚ÄòSetting' screen.</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jun 10, 2024 05:52:50 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jun 10, 2024 05:59:35 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>7</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>138</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"App_Install_Launch":403.823
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@P11270-21740</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@P11270-21742</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@App_Install_Launch</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@P11270-21715</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@P11270-21713</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@AndroidRegressionSet2</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@P11270-21716</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Sprintandroid2413</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@AndroidRegression</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@P11270-21741</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@P11270-21744</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 7,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 138,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
